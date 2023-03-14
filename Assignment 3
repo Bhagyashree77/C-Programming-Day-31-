@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<conio.h>
+int singlenumber(int* nums,int numssize) 
+{
+    int i,result=0;
+    for(i=0;i<numssize; i++) 
+    {
+        result^=nums[i];
+    }
+    return result;
+}
+main()
+{
+    int nums[]={2,2,1};
+    int numssize=sizeof(nums)/sizeof(nums[0]);
+    printf("%d",singlenumber(nums,numssize));
+}
